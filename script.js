@@ -1,5 +1,6 @@
 let passwordLenght = 16;
-const inputEl = document.getElementById("password");
+const inputEl = document.querySelector(".password input");
+
 
 function generatePassword() {
   const chars =
@@ -15,9 +16,13 @@ function generatePassword() {
   console.log(password);
 
   inputEl.value = password;
+  iconEl.classList.remove("bi-clipboard-check")
+  iconEl.classList.add("bi-clipboard")
 }
 function copy() {
   navigator.clipboard.writeText(inputEl.value);
+  iconEl.classList.remove("bi-clipboard");
+  iconEl.classList.add("bi-clipboard-check");
 }
 
 const passwordLenghtEl = document.querySelector("#password-lenght");
@@ -27,6 +32,8 @@ passwordLenghtEl.addEventListener("input", function () {
 });
 
 const copyButtonEl = document.querySelector("#copy");
+const renewButtonEl = document.querySelector("#renew");
+const iconEl = copyButtonEl.querySelector("i");
 copyButtonEl.addEventListener("click", copy);
 
 generatePassword();

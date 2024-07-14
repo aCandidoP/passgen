@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+
     <title>Gerador de Senha</title>
 </head>
 <body>
-    <h1>Gerador de senha</h1>
-    <p>Utilize o nosso gerador online para criar uma senha forte e segura.</p>
+    <main>
+        <section class="hero">
+            <h1 class="title">Gerador de senha</h1>
+            <p class="subtitle">Utilize o nosso gerador online para criar uma senha forte e segura.</p>
+        </section>
 
-    <input type="text" name="password" id="password">
-    <input type="range" name="password-lenght" id="password-lenght" value="16" min="4" max="64"> 
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="password" class="password">
+                </div>
+                <div class="actions">
+                    <button id="copy"><i class="bi bi-clipboard"></i></button>
+                    <button id="renew"><i class="bi bi-arrow-clockwise"></i></button>
+                </div>
+            </div>
+            <div class="security-indicator">
+                <div id="security-indicator-bar" class="bar" style="width: 90%;">
 
-    <button id="copy">Copiar Senha</button>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <input type="range" name="password-lenght" id="password-lenght" value="16" min="4" max="64"> 
+
+        
+    </main>
     <script src="script.js" defer></script>
 </body>
 </html>
